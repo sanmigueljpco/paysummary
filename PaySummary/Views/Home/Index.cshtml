@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<h2>Upload Csv</h2>
+
+<form asp-action="UploadCsv" method="post" enctype="multipart/form-data" class="form-horizontal" role="form">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label for="selectedFile" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input type="file" id="selectedFile" name="selectedFile" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 col-md-offset-2">
+            <input type="submit" class="btn btn-primary" value="Submit" />
+        </div>
+    </div>
+</form>
+
+<h2>View Payroll Summary</h2>
+<a asp-controller="Home" asp-action="GetPayrollReport">View Json</a>
